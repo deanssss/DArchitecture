@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import kotlinx.android.synthetic.main.activity_main.*
 import xyz.dean.architecture.mvc.MvcActivity
+import xyz.dean.architecture.mvp.MvpActivity
 
 class MainActivity : AppCompatActivity() {
 
@@ -13,6 +14,9 @@ class MainActivity : AppCompatActivity() {
 
         mvc_bt.setOnClickListener {
             startActivity(MvcActivity.createIntent(this))
+        }
+        mvp_bt.setOnClickListener {
+            startActivity(MvpActivity.createIntent(this))
         }
     }
 }
