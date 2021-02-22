@@ -9,6 +9,7 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import kotlinx.android.synthetic.main.activity_mvc.*
 import xyz.dean.architecture.R
+import xyz.dean.architecture.api.PhraseInfo
 
 @SuppressLint("SetTextI18n")
 class MvcActivity : AppCompatActivity() {
@@ -27,16 +28,20 @@ class MvcActivity : AppCompatActivity() {
 
     private fun getPhrase() {
         mvcModel.requestPhrase(
-            onResult = {
-                phrase_tv.text = it.phrase
-                from_tv.text = "——${it.fromWho ?: ""}「${it.from}」"
-            },
-            onError = {
-                Toast.makeText(this,
-                    "Request phrase failed. Caused by: ${it.message}",
-                    Toast.LENGTH_SHORT
-                ).show()
-            })
+            onResult = { updateView(it) },
+            onError = { showErrorToast("Request phrase failed. Caused by: ${it.message}") }
+        )
+    }
+
+    private fun updateView(phrase: PhraseInfo) {
+        /*--- View 层的逻辑 ---*/
+        phrase_tv.text = phrase.phrase
+        from_tv.text = "——${phrase.fromWho ?: ""}「${phrase.from}」"
+    }
+
+    private fun showErrorToast(msg: String) {
+        /*--- View 层的逻辑 ---*/
+        Toast.makeText(this, msg, Toast.LENGTH_SHORT).show()
     }
 
     override fun onDestroy() {

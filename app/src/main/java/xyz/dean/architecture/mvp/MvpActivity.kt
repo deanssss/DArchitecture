@@ -39,6 +39,11 @@ class MvpActivity : AppCompatActivity(), MvpContract.View {
 
     override fun setPresenter(presenter: MvpContract.Presenter) { }
 
+    override fun onDestroy() {
+        super.onDestroy()
+        presenter.destroy()
+    }
+
     companion object {
         fun createIntent(context: Context): Intent =
             Intent(context, MvpActivity::class.java)
