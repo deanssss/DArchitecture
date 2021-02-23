@@ -10,7 +10,7 @@
 ## 常见的架构模式
 
 * [MVC架构](./app/src/main/java/xyz/dean/architecture/mvc/MVC架构.md)
-* MVP
+* [MVP](./app/src/main/java/xyz/dean/architecture/mvp/MVP架构.md)
 * MVI
 * MVVM
 * Redux

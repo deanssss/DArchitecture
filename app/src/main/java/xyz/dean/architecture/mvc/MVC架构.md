@@ -1,7 +1,5 @@
 # MVC架构
 
-![](../../../../../../../../.images/mvc_arc.png)
-
 ## 起源与发展
 
 MVC模式最初由Trygve Reenskaug于1979年提出并定义：

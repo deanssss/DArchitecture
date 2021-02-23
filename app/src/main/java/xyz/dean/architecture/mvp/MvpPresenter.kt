@@ -13,10 +13,6 @@ class MvpPresenter(private val view: MvpContract.View) : MvpContract.Presenter {
     private val phraseService: PhraseService = apiClient.createService(PhraseService::class.java)
     private val callList: MutableList<Call<*>> = mutableListOf()
 
-    init {
-        view.setPresenter(this)
-    }
-
     override fun getPhrase() {
         val call = phraseService.getPhrase()
         callList.add(call)
