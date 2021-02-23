@@ -3,4 +3,5 @@
     <string name="common_delete">Delete</string>
     <string name="main_mvc">MVC</string>
     <string name="main_mvp">MVP</string>
+    <string name="main_mvvm">MVVM</string>
 </resources>

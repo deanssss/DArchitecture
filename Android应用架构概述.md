@@ -10,9 +10,9 @@
 ## 常见的架构模式
 
 * [MVC架构](./app/src/main/java/xyz/dean/architecture/mvc/MVC架构.md)
-* [MVP](./app/src/main/java/xyz/dean/architecture/mvp/MVP架构.md)
+* [MVP架构](./app/src/main/java/xyz/dean/architecture/mvp/MVP架构.md)
+* [MVVM架构](./app/src/main/java/xyz/dean/architecture/mvvm/MVVM架构.md)
 * MVI
-* MVVM
 * Redux
 * AAC(Android Architecture Components)
 * 分层模式
