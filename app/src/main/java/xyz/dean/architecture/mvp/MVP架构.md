@@ -22,13 +22,6 @@ MVP架构模式解除了View与Model耦合，避免了业务逻辑出现View中�
 * **Model**：用来保存程序的数据状态，比如数据存储，网络请求等。
 * **View**：GUI组件构成，向用户展示数据，响应用户事件等。
 * **Presenter**：作为沟通View和Model的桥梁，处理来自View层转发的用户请求，从Model层检索数据，通知View层改变界面等。
- 
-## 解决的问题
-
-1. 规范了传统MVC中混乱的数据流向/事件流向。
-2. 将用户事件捕获从Controller中抽离出来，使Controller可以专注于业务逻辑。
-3. 解除了View与Model之间的强耦合，使View层能更专注于UI处理。
-4. 解除了View与Presenter之间的强耦合，使一个Presenter能够应用于多个View，同时各个模块可以独立开发、独立测试。
 
 ## 两种常见的MVP
 
@@ -41,7 +34,19 @@ Passive View MVP是最典型的，在该架构模式中，View层是被动的，
 ### Supervising Controller
 
 Supervising Controller MVP与Passive View MVP的不同之处在于前者并没有完全解除View与Model之间的耦合，
-而是使用DataBinding这类的框架将View属性与Model中的数据进行绑定，简单的数据展示直接由View与Model进行同步，而
+而是使用DataBinding这类的框架将View属性与Model中部分数据进行绑定，简单的数据展示直接由View与Model进行同步，而
 Presenter只处理复杂的状态同步与模块协调等工作。
 
 ![](../../../../../../../../.images/mvp_supervising_controller.png)
+
+## 解决的问题
+
+1. 规范了传统MVC中混乱的数据流向/事件流向。
+2. 将用户事件捕获从Controller(Presenter)中抽离出来，使Controller(Presenter)可以专注于业务逻辑。
+3. 解除了View与Model之间的强耦合，使View层能更专注于UI处理。
+4. 解除了View与Presenter之间的强耦合，使一个Presenter能够应用于多个View，同时各个模块可以独立开发、独立测试。
+
+## 存在的问题
+
+1. 会引入大量的接口，增加代码结构的复杂性（查看调用逻辑会很麻烦）。
+2. Presenter层持有View，导致该层不得不感知View的声明周期，带来额外的复杂度。
