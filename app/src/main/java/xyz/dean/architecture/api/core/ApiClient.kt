@@ -4,6 +4,7 @@ import android.annotation.SuppressLint
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
+import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory
 import retrofit2.converter.gson.GsonConverterFactory
 import java.security.SecureRandom
 import java.security.cert.CertificateException
@@ -38,6 +39,7 @@ class ApiClient private constructor(
 private fun defaultRetrofitBuilder() =
     Retrofit.Builder()
         .addConverterFactory(GsonConverterFactory.create())
+        .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
 
 private const val UNSAFE_SSL = false
 private const val ALLOW_LOG = true

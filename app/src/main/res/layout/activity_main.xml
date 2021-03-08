@@ -24,4 +24,10 @@
         android:text="@string/main_mvvm"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
+
+    <Button
+        android:id="@+id/mvi_bt"
+        android:text="@string/main_mvi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
 </LinearLayout>
