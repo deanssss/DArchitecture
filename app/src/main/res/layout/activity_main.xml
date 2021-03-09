@@ -30,4 +30,11 @@
         android:text="@string/main_mvi"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
+
+    <Button
+        android:id="@+id/redux_bt"
+        android:text="@string/main_redux"
+        android:textAllCaps="false"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
 </LinearLayout>

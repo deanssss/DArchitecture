@@ -7,6 +7,7 @@ import xyz.dean.architecture.mvc.MvcActivity
 import xyz.dean.architecture.mvi.MviActivity
 import xyz.dean.architecture.mvp.MvpActivity
 import xyz.dean.architecture.mvvm.MvvmActivity
+import xyz.dean.architecture.redux.ReduxActivity
 
 class MainActivity : AppCompatActivity() {
 
@@ -25,6 +26,9 @@ class MainActivity : AppCompatActivity() {
         }
         mvi_bt.setOnClickListener {
             startActivity(MviActivity.createIntent(this))
+        }
+        redux_bt.setOnClickListener {
+            startActivity(ReduxActivity.createIntent(this))
         }
     }
 }

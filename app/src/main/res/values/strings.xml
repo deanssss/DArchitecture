@@ -5,4 +5,5 @@
     <string name="main_mvp">MVP</string>
     <string name="main_mvvm">MVVM</string>
     <string name="main_mvi">MVI</string>
+    <string name="main_redux">Redux</string>
 </resources>
