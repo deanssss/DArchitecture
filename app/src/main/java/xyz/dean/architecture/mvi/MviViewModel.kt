@@ -9,7 +9,7 @@ import io.reactivex.ObservableTransformer
 import io.reactivex.functions.BiFunction
 import io.reactivex.subjects.BehaviorSubject
 import io.reactivex.subjects.PublishSubject
-import xyz.dean.architecture.util.notOfType
+import xyz.dean.architecture.util.reactivex.notOfType
 
 class MviViewModel : LifecycleScopeProvider<MviViewModel.LifeEvent> {
     private val processor = MviProcessor()
