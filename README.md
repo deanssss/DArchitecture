@@ -14,7 +14,7 @@
 * [x] [MVC架构](./app/src/main/java/xyz/dean/architecture/mvc/MVC架构.md)
 * [x] [MVP架构](./app/src/main/java/xyz/dean/architecture/mvp/MVP架构.md)
 * [x] [MVVM架构](./app/src/main/java/xyz/dean/architecture/mvvm/MVVM架构.md)
-* [x] ~~MVI~~(吐了，模板代码也太多了，核心思想是基于事件/数据流构建响应式APP)
+* [ ] MVI（吐了，这东西模板代码也太多了，核心思想是基于事件/数据流构建响应式APP)
 * [ ] Redux
 * [ ] AAC(Android Architecture Components)
 * [ ] 分层模式
@@ -25,7 +25,7 @@
 
 ## 参考
 
-[GUI 应用程序架构的十年变迁：MVC、MVP、MVVM、Unidirectional、Clean](https://zhuanlan.zhihu.com/p/26799645?hmsr=toutiao.io&utm_medium=toutiao.io&utm_source=toutiao.io)
-[浅谈 MVC、MVP 和 MVVM 架构模式](https://draveness.me/mvx/)
-[从状态管理(State Manage)到MVI（Model-View-Intent）](https://juejin.cn/post/6844903552431685645)
-[[译]使用MVI打造响应式APP(一):Model到底是什么](https://juejin.cn/post/6844903789015597070)
+* [GUI 应用程序架构的十年变迁：MVC、MVP、MVVM、Unidirectional、Clean](https://zhuanlan.zhihu.com/p/26799645?hmsr=toutiao.io&utm_medium=toutiao.io&utm_source=toutiao.io)
+* [浅谈 MVC、MVP 和 MVVM 架构模式](https://draveness.me/mvx/)
+* [从状态管理(State Manage)到MVI（Model-View-Intent）](https://juejin.cn/post/6844903552431685645)
+* [[译]使用MVI打造响应式APP(一):Model到底是什么](https://juejin.cn/post/6844903789015597070)
