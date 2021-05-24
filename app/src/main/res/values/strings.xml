@@ -6,4 +6,6 @@
     <string name="main_mvvm">MVVM</string>
     <string name="main_mvi">MVI</string>
     <string name="main_redux">Redux</string>
+
+    <string name="common_phrase_from_format">——%s「%s」</string>
 </resources>

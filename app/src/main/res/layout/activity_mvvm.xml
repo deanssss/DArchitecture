@@ -46,7 +46,7 @@
                     android:layout_marginTop="8dp"
                     android:layout_gravity="end"
                     android:lines="1"
-                    android:text='@{"——" + (phraseInfo.fromWho ?? "") + "「" + phraseInfo.from + "」"}'
+                    android:text='@{@string/common_phrase_from_format(phraseInfo.fromWho ?? "", phraseInfo.from)}'
                     android:textColor="#315765"
                     android:textSize="12sp"
                     tools:text="——「临江仙·苏轼」" />
