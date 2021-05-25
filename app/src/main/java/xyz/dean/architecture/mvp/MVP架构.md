@@ -2,10 +2,11 @@
 
 在MVC一文中，我们提到了起源于Web的一种MVC架构变体，这套架构模式除了被广泛应用于Web后端（比如SpringMVC框架），也反哺了客户端架构的演化。
 
-随着GUI框架的不断进化与完善，View层具备了独立的捕获交互事件以及处理交互事件的能力，捕获用户事件的操作从Controller转移到了View中，
-这减轻了Controller的负担，使其可以专心的处理业务逻辑了。  
-此外，还存在一个问题，那就是MVC中View层与Model层相耦合，View可以不经过Controller直接向Model请求数据，为了使Controller不那么可有可无，
-人们便借鉴了Web中的MVC架构，View必须通过Controller向Model发起请求，Controller收到结果再去更新View，这样一来，View就只负责UI，无需处理业务逻辑。
+随着GUI框架的不断进化与完善，View层具备了独立的捕获交互事件以及处理交互事件的能力，因此处理交互的逻辑从Controller转移到了View中，这使得Controller直接没有存在的必要了。这种情况也同样体现在Android中：Activity和XML View组成了新View层，而不再需要Controller的角色。
+
+前面提到，Controller在协助View处理用户事件时，还顺便揽下了一部分介于View和Model之间的业务逻辑，比如在View和Model之间传递数据和请求，将Model层返回的数据做一下转换再交给View渲染等等。而Controller的消失则让这部分逻辑不得不去再次回到View或Model中，进而使得View和Model相互耦合起来。
+
+为此，人们便借鉴了Web中的MVC架构，View必须通过Controller向Model发起请求，Controller收到结果再去更新View。这样一来，View和Model就被隔离开了，同时之前那些业务逻辑又有合适的去处了。
 
 ![](../../../../../../../../.images/mvc_to_mvp.png)
 
@@ -13,7 +14,7 @@
 从名称也可以想到，这是一个协调View和Model工作的角色。
 
 MVP架构模式解除了View与Model耦合，避免了业务逻辑出现View中，使在MVC中混乱的数据流/事件流变得清晰起来。
-再后来，人们发现Presenter与View之间存在强耦合，这让两部分不好独立的进行开发与测试，便运用依赖倒置原则(DIP)提取出接口，让它们相互依赖接口。
+再后来，人们发现Presenter与View之间存在强耦合，这两部分不好独立的进行开发与测试，便运用依赖倒置原则(DIP)提取出接口，让它们相互依赖接口，便有了如今的MVP。
 
 ![](../../../../../../../../.images/mvp_with_dip.png)
 

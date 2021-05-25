@@ -2,17 +2,14 @@
 
 ## 从Supervising Controller到Presentation Model
 
-Supervising Controller MVP使用数据绑定直接将View与Model中部分属性进行绑定，在一定程度上减少了视图与模型之间同步的代码。
-然而这种绑定只适用于简单属性-状态的同步，涉及到较为复杂视图状态同步便无能为力了；并且，在业务逻辑较为复杂时，直接将领域模型实体暴露给展示层，
-可能会导致混合业务逻辑与表示逻辑的问题。
+在前文中，我们提到，Supervising Controller MVP使用数据绑定直接将View与Model中部分属性进行绑定，在一定程度上减少了视图与模型之间同步的代码。  
+然而这种绑定只适用于简单属性-状态的同步，涉及到较为复杂视图状态同步便无能为力了；并且，在业务逻辑较为复杂时，直接将领域模型实体暴露给展示层，可能会导致混合业务逻辑与表示逻辑的问题。
 
 ![](../../../../../../../../.images/mvp_supervising_controller.png)
 
-在2004年，Martin Flower提出了Presentation Model，该模式从视图层抽象出一个展示模型，
-并命名为Presentation Model，视图则根据这个模型的实体进行渲染。  
+在2004年，Martin Flower提出了Presentation Model，该模式从视图层抽象出一个展示模型，并命名为Presentation Model，视图则根据这个模型的实体进行渲染。  
 
-Presentation Model将视图中的状态和行为放到一个单独的展示模型中，协调领域对象（模型），并为展示层提供接口，从而最大程度的减少在视图层中的逻辑。
-视图层则将所有状态存储在展示模型中，并保持其状态与展示模型中的状态同步。
+Presentation Model将视图中的状态和行为放到一个单独的展示模型中，协调领域对象（模型），并为展示层提供接口，从而最大程度的减少在视图层中的逻辑。视图层则将所有状态存储在展示模型中，并保持其状态与展示模型中的状态同步。
 
 ![](../../../../../../../../.images/presentation_model.jpg)
 
@@ -23,8 +20,7 @@ Presentation Model将视图中的状态和行为放到一个单独的展示模�
 
 ![](../../../../../../../../.images/mvvm.png)
 
-除了Model、View、ViewModel以外，微软之后还为MVVM引入了一个隐式的Binder层，通过Binder就可以用声明的方式将ViewModel中保存的状态数据与视图的状态相绑定，
-从而实现展示模型与View自动更新。在Android中，这个Binder就是Google Jetpack中提供的DataBinding。
+除了Model、View、ViewModel以外，微软之后还为MVVM引入了一个隐式的Binder层，通过Binder就可以用声明的方式将ViewModel中保存的状态数据与视图的状态相绑定，从而实现展示模型与View自动更新。在Android中，这个Binder就是Google Jetpack中提供的DataBinding。
 
 ![](../../../../../../../../.images/mvvm_with_binder.png)
 
